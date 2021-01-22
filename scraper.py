@@ -47,7 +47,7 @@ def main():
     banner()
     while(True):
         domain = input(Fore.MAGENTA + "Domain: " + Fore.WHITE)
-        f = open(domain + '.txt', "a")
+        f = open(domain + '.lst', "a")
         response = requests.get('http://ipinfo.io/ranges/' + domain + '?token=' + Token)
         print(response.text, file=f)
         f.close()
