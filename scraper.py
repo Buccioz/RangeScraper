@@ -25,7 +25,7 @@ def banner():
 """, 'magenta');
     cprint("""
                         :::::::::::::::::::IP RANGE SCRAPER FOR IPINFO.IO:::::::::::::::::::::
-                        ::::::::::::::::::::::::Woozy#0001 & Davidb003::::::::::::::::::::::::                     
+                        :::::::::::::::::::::::::Woozy & Davidb003::::::::::::::::::::::::::::                    
                                                                                                 """, 'white');
                                                                                 
 
@@ -45,11 +45,12 @@ def main():
 
     clear()
     banner()
-    f = open("ranges.txt", "a")
-    domain = input(Fore.MAGENTA + "Domain: " + Fore.WHITE)
-    response = requests.get('http://ipinfo.io/ranges/' + domain + '?token=' + Token)
-    print(response.text, file=f)
-    f.close()
+    while(True):
+        domain = input(Fore.MAGENTA + "Domain: " + Fore.WHITE)
+        f = open(domain + '.txt', "a")
+        response = requests.get('http://ipinfo.io/ranges/' + domain + '?token=' + Token)
+        print(response.text, file=f)
+        f.close()
 
 
 main()
