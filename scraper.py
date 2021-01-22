@@ -45,12 +45,11 @@ def main():
 
     clear()
     banner()
-    while(True):
-        f = open("ranges.txt", "a")
-        domain = input(Fore.MAGENTA + "Domain: " + Fore.WHITE)
-        response = requests.get('http://ipinfo.io/ranges/' + domain + '?token=' + Token)
-        print(response.text, file=f)
-        f.close()
+    f = open("ranges.txt", "a")
+    domain = input(Fore.MAGENTA + "Domain: " + Fore.WHITE)
+    response = requests.get('http://ipinfo.io/ranges/' + domain + '?token=' + Token)
+    print(response.text, file=f)
+    f.close()
 
 
 main()
