@@ -19,3 +19,6 @@ _Works with ipinfo.io's API_
 Just run the `scraper.py` file with Python3
 
 _or_ `python3 scraper.py` _if you are using Linux_
+
+## Example Hostnames 
+`wanadoo.fr`, `proxad.fr`, `vodafonedsl.it`, `telecomitalia.it`
