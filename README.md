@@ -1,3 +1,5 @@
+![Banner](https://imbt.ga/P33xop8Y5Y)
+
 # RangeScraper
 A simple tool that allows you to scrape IP Addresses by knowing a domain.
 
